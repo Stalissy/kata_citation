@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body class="chaos-universal -theme">
     <header>
+      <select id="theme-select">
+        <option value="chaos-universal">Chaos universel</option>
+        <option value="nurgle">Nurgle</option>
+        <option value="khorne">Khorne</option>
+        <option value="slaneesh">Slaanesh</option>
+        <option value="tzeentch">Tzeentch</option>
+      </select>
       <h1>Mes citation</h1>
       <h2>Gestionnaire de citation en ligne</h2>
-      <h3>0 citation</h3>
-      <hr />
+      <h3 id="count">0 citation</h3>
     </header>
     <main>
       <form action="" id="form-citation">
@@ -31,18 +37,12 @@
           name="author"
           placeholder="Entrer le nom de l'auteur"
         />
-        <button type="submit">Validée</button>
+        <button type="submit" id="btn-submit">Validée</button>
       </form>
-      <hr />
-      <div id="quote-list">
-        <div class="quote">
-          <p class="text">On ne naît pas femme, on le devient.</p>
-          <p class="author">Simone de Beauvoir</p>
-          <hr />
-        </div>
-      </div>
+      <div id="quote-list"></div>
     </main>
 
     <script src="main.js"></script>
+    <script src="chooseTheme.js"></script>
   </body>
 </html>
